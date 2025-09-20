@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% set page = { title: "Contact", active: true } %}
+
+{% block title %}{{ site.name }} - {{ page.title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="page-title">{{ page.title }} Us</h1>
+                <p class="page-subtitle">Get in touch with our team and let's discuss your project</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-container">
+                    <h3 class="form-title">Send us a Message</h3>
+                    <p class="form-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+                            <div class="col-12">
+                                <label for="company" class="form-label">Company Name</label>
+                                <input type="text" class="form-control" id="company" name="company">
+                            </div>
+                            <div class="col-12">
+                                <label for="service" class="form-label">Service Interested In</label>
+                                <select class="form-select" id="service" name="service">
+                                    <option value="">Select a service</option>
+                                    {% for service in site.services %}
+                                    <option value="{{ service.title }}">{{ service.title }}</option>
+                                    {% endfor %}
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="budget" class="form-label">Project Budget</label>
+                                <select class="form-select" id="budget" name="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="under-10k">Under $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k-100k">$50,000 - $100,000</option>
+                                    <option value="over-100k">Over $100,000</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Project Description *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to our newsletter for updates and insights
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-modern btn-lg">
+                                    <i class="bi bi-send me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info-container">
+                    <h3 class="info-title">Get in Touch</h3>
+                    <p class="info-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                    
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-geo-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h6>Address</h6>
+                                <p>{{ site.address }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="info-content">
+                                <h6>Phone</h6>
+                                <p>{{ site.phone }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h6>Email</h6>
+                                <p>{{ site.email }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info-item">
+                            <div class="info-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <div class="info-content">
+                                <h6>Business Hours</h6>
+                                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-section">
+                        <h6>Follow Us</h6>
+                        <div class="social-links">
+                            <a href="{{ site.social.facebook }}" class="social-link">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="{{ site.social.twitter }}" class="social-link">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="{{ site.social.linkedin }}" class="social-link">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="{{ site.social.github }}" class="social-link">
+                                <i class="bi bi-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                    <p class="section-subtitle">Find answers to common questions about our services</p>
+                </div>
+                
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                What services do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer comprehensive software development services including web development, mobile app development, cloud solutions, and consulting. Our team specializes in modern technologies like React, Node.js, Python, and cloud platforms.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                How long does a typical project take?
+                            </button>
+                        </h2>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, while complex web applications can take 2-6 months. We provide detailed timelines during our initial consultation.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Do you provide ongoing support?
+                            </button>
+                        </h2>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! We offer comprehensive support and maintenance packages to ensure your project continues to perform optimally. Our support includes bug fixes, updates, security patches, and feature enhancements.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                What is your development process?
+                            </button>
+                        </h2>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We follow an agile development methodology with regular check-ins and iterations. Our process includes discovery, planning, design, development, testing, and deployment phases, with continuous client feedback throughout.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData);
+    
+    // Simple validation
+    if (!data.firstName || !data.lastName || !data.email || !data.message) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    // Simulate form submission
+    const submitBtn = this.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    
+    submitBtn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+    submitBtn.disabled = true;
+    
+    setTimeout(() => {
+        alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+        this.reset();
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+    }, 2000);
+});
+</script>
+{% endblock %}

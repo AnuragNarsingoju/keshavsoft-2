@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% set page = { title: "Home", active: true } %}
+
+{% block title %}{{ site.name }} - {{ page.title }}{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <div class="badge-container mb-4">
+                        <span class="modern-badge">
+                            <i class="bi bi-star-fill me-2"></i>Trusted by 500+ Companies
+                        </span>
+                    </div>
+                    <h1 class="hero-title">
+                        Welcome to <span class="gradient-text">{{ site.name }}</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        {{ site.description }}
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="about.html" class="btn btn-primary btn-modern">
+                            <i class="bi bi-arrow-right me-2"></i>Explore Our Work
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-modern">
+                            <i class="bi bi-play-circle me-2"></i>Watch Demo
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        {% for stat in site.stats %}
+                        <div class="stat-item">
+                            <h3>{{ stat.number }}</h3>
+                            <p>{{ stat.label }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-visual">
+                    <div class="hero-animation-container">
+                        <div class="hero-icon-main">
+                            <i class="bi bi-laptop display-1"></i>
+                            <div class="hero-glow-effect"></div>
+                        </div>
+                        <div class="tech-icons">
+                            {% for tech in site.technologies %}
+                            <div class="tech-icon tech-{{ loop.index }}">
+                                <i class="bi {{ tech.icon }}"></i>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <i class="bi bi-code-slash"></i>
+                            <span>Web Dev</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="bi bi-phone"></i>
+                            <span>Mobile</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="bi bi-cloud"></i>
+                            <span>Cloud</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="section-badge mb-3">
+                    <span class="badge-text">Our Services</span>
+                </div>
+                <h2 class="section-title">
+                    What We <span class="gradient-text">Offer</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive software solutions tailored to your business needs
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for service in site.services %}
+            <div class="col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="bi {{ service.icon }}"></i>
+                    </div>
+                    <h4>{{ service.title }}</h4>
+                    <p>{{ service.description }}</p>
+                    <div class="tech-stack">
+                        {% for tech in service.technologies %}
+                        <span class="tech-tag">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="#" class="service-link">
+                        Learn More <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-card modern-stat-card">
+                    <div class="stat-icon-container">
+                        <div class="stat-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <div class="stat-icon-bg"></div>
+                    </div>
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Projects Completed</p>
+                    <div class="stat-progress">
+                        <div class="progress-bar" data-width="95"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-card modern-stat-card">
+                    <div class="stat-icon-container">
+                        <div class="stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-icon-bg"></div>
+                    </div>
+                    <h3 class="stat-number" data-target="25">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                    <div class="stat-progress">
+                        <div class="progress-bar" data-width="88"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-card modern-stat-card">
+                    <div class="stat-icon-container">
+                        <div class="stat-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div class="stat-icon-bg"></div>
+                    </div>
+                    <h3 class="stat-number" data-target="5">0</h3>
+                    <p class="stat-label">Years Experience</p>
+                    <div class="stat-progress">
+                        <div class="progress-bar" data-width="92"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-card modern-stat-card">
+                    <div class="stat-icon-container">
+                        <div class="stat-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <div class="stat-icon-bg"></div>
+                    </div>
+                    <h3 class="stat-number" data-target="24">0</h3>
+                    <p class="stat-label">Support Hours</p>
+                    <div class="stat-progress">
+                        <div class="progress-bar" data-width="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <p class="cta-subtitle">Let's build something amazing together</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="contact.html" class="btn btn-primary btn-modern btn-lg">
+                    <i class="bi bi-rocket-takeoff me-2"></i>Get Started Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

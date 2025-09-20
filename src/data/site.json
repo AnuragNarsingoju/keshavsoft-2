@@ -1,0 +1,121 @@
+{
+  "name": "KeshavSoft",
+  "description": "Creating innovative software solutions that drive business growth and digital transformation.",
+  "url": "https://keshavsoft.com",
+  "email": "info@keshavsoft.com",
+  "phone": "+1 (555) 123-4567",
+  "address": "123 Tech Street, Innovation City",
+  "social": {
+    "facebook": "#",
+    "twitter": "#",
+    "linkedin": "#",
+    "github": "#"
+  },
+  "navigation": [
+    { "name": "Home", "url": "index.html", "icon": "bi-house" },
+    { "name": "About", "url": "about.html", "icon": "bi-people" },
+    { "name": "Contact", "url": "contact.html", "icon": "bi-envelope" }
+  ],
+  "services": [
+    {
+      "title": "Web Development",
+      "description": "Custom web applications built with modern technologies and best practices.",
+      "icon": "bi-code-slash",
+      "technologies": ["React", "Node.js", "MongoDB"]
+    },
+    {
+      "title": "Mobile Apps",
+      "description": "Native and cross-platform mobile applications for iOS and Android.",
+      "icon": "bi-phone",
+      "technologies": ["React Native", "Flutter", "Swift"]
+    },
+    {
+      "title": "Cloud Solutions",
+      "description": "Scalable cloud infrastructure and deployment solutions.",
+      "icon": "bi-cloud",
+      "technologies": ["AWS", "Azure", "Docker"]
+    }
+  ],
+  "stats": [
+    { "number": "50+", "label": "Projects Completed" },
+    { "number": "25+", "label": "Happy Clients" },
+    { "number": "5+", "label": "Years Experience" },
+    { "number": "24", "label": "Support" }
+  ],
+  "team": [
+    {
+      "name": "Keshav Kumar",
+      "position": "CEO & Founder",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      "bio": "Visionary leader with 10+ years in software development and digital transformation.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/keshav-kumar",
+        "twitter": "https://twitter.com/keshavkumar",
+        "github": "https://github.com/keshavkumar"
+      }
+    },
+    {
+      "name": "Priya Sharma",
+      "position": "CTO",
+      "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
+      "bio": "Technical expert specializing in cloud architecture and scalable systems.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/priya-sharma",
+        "twitter": "https://twitter.com/priyasharma",
+        "github": "https://github.com/priyasharma"
+      }
+    },
+    {
+      "name": "Arjun Patel",
+      "position": "Lead Developer",
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      "bio": "Full-stack developer passionate about modern technologies and clean code.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/arjun-patel",
+        "twitter": "https://twitter.com/arjunpatel",
+        "github": "https://github.com/arjunpatel"
+      }
+    },
+    {
+      "name": "Sneha Reddy",
+      "position": "UI/UX Designer",
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      "bio": "Creative designer focused on user experience and modern interface design.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/sneha-reddy",
+        "twitter": "https://twitter.com/snehareddy",
+        "github": "https://github.com/snehareddy"
+      }
+    },
+    {
+      "name": "Rahul Singh",
+      "position": "DevOps Engineer",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+      "bio": "Infrastructure specialist with expertise in cloud deployment and automation.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/rahul-singh",
+        "twitter": "https://twitter.com/rahulsingh",
+        "github": "https://github.com/rahulsingh"
+      }
+    },
+    {
+      "name": "Anita Gupta",
+      "position": "Project Manager",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&h=300&fit=crop&crop=face",
+      "bio": "Experienced project manager ensuring timely delivery and client satisfaction.",
+      "social": {
+        "linkedin": "https://linkedin.com/in/anita-gupta",
+        "twitter": "https://twitter.com/anitagupta",
+        "github": "https://github.com/anitagupta"
+      }
+    }
+  ],
+  "technologies": [
+    { "name": "React", "icon": "bi-filetype-jsx" },
+    { "name": "Node.js", "icon": "bi-filetype-js" },
+    { "name": "Python", "icon": "bi-filetype-py" },
+    { "name": "MongoDB", "icon": "bi-database" },
+    { "name": "AWS", "icon": "bi-cloud" },
+    { "name": "Docker", "icon": "bi-box" }
+  ]
+}
